@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Friend Finder Survey</title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/d02cd26d97.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container col-10">
+      <div class="jumbotron">
+        <div class="container text-center">
+          <h1><span class="fas fa-poll-h"></span> Survey</h1>
+          <br />
+
+          <hr />
+
+          <h3>
+            Rate each statement based on how well it describes your personality.
+            <br />
+            1 = Innacurate, 3 = Neutral, 5 = Accurate
+          </h3>
+          <br />
+        </div>
+        <div class="container col-10" id="survey-questions">
+          <div class="form-group">
+            <label for="inputName">Your Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputName"
+              aria-describedby="nameHelp"
+              placeholder="Enter name"
+            />
+          </div>
+          <div class="form-group">
+            <label for="inputName">Your Photo (Enter URL)</label>
+            <input
+              type="text"
+              class="form-control"
+              id="inputPhoto"
+              aria-describedby="nameHelp"
+              placeholder="Photo URL"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="question1">1. I love challenging tasks and jobs</label>
+            <select class="form-control" id="question1">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question2"
+              >2. The mailman is evil and must be kept away at all costs
+            </label>
+            <select class="form-control" id="question2">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question3">3. Leather shoes are a delicacy </label>
+            <select class="form-control" id="question3">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question4"
+              >4. Socks are meant to be eaten, not sorted
+            </label>
+            <select class="form-control" id="question4">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question5"
+              >5. Socks are meant to be eaten, not sorted
+            </label>
+            <select class="form-control" id="question5">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question6"
+              >6. Socks are meant to be eaten, not sorted
+            </label>
+            <select class="form-control" id="question6">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question7"
+              >7. Socks are meant to be eaten, not sorted
+            </label>
+            <select class="form-control" id="question7">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question8"
+              >8. I learn new tricks quickly and easily
+            </label>
+            <select class="form-control" id="question8">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question9"
+              >9. Sometimes I feel the need to do the zoomies all over the house
+            </label>
+            <select class="form-control" id="question9">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="question10"
+              >10. When a stranger approaches me, I am calm and collected
+            </label>
+            <select class="form-control" id="question10">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+
+          <button class="btn btn-dark" id="submit-btn">Submit</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+
+
+// submit on click function
+will create new object with new variables -->
