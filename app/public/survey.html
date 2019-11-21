@@ -293,29 +293,23 @@ will create new object with new variables -->
             )
           ]
         };
-        // console.log(newFriend);
 
-        $.post("/api/friends", newFriend, function(data) {
-          if (data) {
-            console.log("You have been added to friends list");
-            // console.log(newFriend);
-            // $("#modalid").modal("toggle");
-          } else {
-            console.log("Error");
-          }
-        });
-
-        // if (newFriend.name === "" || newFriend.photo === "") {
-        //   alert(
-        //     "One or more fields is blank! Please enter your name and photo URL to find a friend!"
-        //   );
-        //   //This else statement doesn't seem to be working...
-        // } else {
-        //   $.post("/api/friends", newFriend).then(function(data) {
-        //     console.log("survey.html", data);
-        //     alert("Adding friend...");
-        //   });
-        // }
+        if (newFriend.name === "" || newFriend.photo === "") {
+          alert(
+            "One or more fields is blank! Please enter your name and photo URL to find a friend!"
+          );
+          //This else statement doesn't seem to be working...
+        } else {
+          $.post("/api/friends", newFriend, function(data) {
+            if (data) {
+              console.log("You have been added to friends list");
+              // console.log(newFriend);
+              // $("#modalid").modal("toggle");
+            } else {
+              console.log("Error");
+            }
+          });
+        }
 
         var difference = function(a, b) {
           return Math.abs(a - b);

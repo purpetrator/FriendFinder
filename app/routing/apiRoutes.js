@@ -27,29 +27,11 @@ module.exports = function(app) {
     console.log("New friend: " + newFriend);
     // console.log(friendsData);
 
-    // var difference = function(a, b) {
-    //   return Math.abs(a - b);
-    // };
-
-    // var matchScore = 0;
-
-    // // var demoScores = [2, 2, 4, 3, 3, 3, 4, 5, 3, 3];
-    // for (var i = 0; i < friendsData.length; i++) {
-    //   // console.log(friendsData[i].name);
-    //   // console.log(friendsData[i]);
-    //   for (var i = 0; i < newFriend.scores.length; i++) {
-    //     matchScore += difference(friendsData[i].scores[i], newFriend.scores[i]);
-    //     console.log("Match: " + friendsData[i].name);
-    //     console.log("Match score: " + matchScore);
-    //   }
-    // }
-
     // This loop is comparing the survey answers with the existing friends and calculating a match score
     var difference = function(a, b) {
       return Math.abs(a - b);
     };
 
-    // var demoScores = [2, 2, 4, 3, 3, 3, 4, 5, 3, 3]
     var matchScore;
     var bestMatchScore = 50000;
     var bestMatchIndex;
@@ -71,6 +53,9 @@ module.exports = function(app) {
       bestMatchScore = matchScore;
       bestMatchIndex = i;
     }
+
+    console.log("best match score: " + bestMatchScore);
+    console.log("best match index: " + bestMatchIndex);
 
     friendsData.push(req.body);
     res.json("placeholder");
