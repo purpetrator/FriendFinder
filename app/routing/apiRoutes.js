@@ -27,6 +27,7 @@ module.exports = function(app) {
   // API POST Requests
 
   app.post("/api/friends", function(req, res) {
-    // will do logic to compare friends here (inside of post route)
+    console.log(res);
+    // hkhjh logic goes here
   });
 };
