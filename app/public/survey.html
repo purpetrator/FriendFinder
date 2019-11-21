@@ -293,7 +293,17 @@ will create new object with new variables -->
             )
           ]
         };
-        console.log(newFriend);
+        // console.log(newFriend);
+
+        $.post("/api/friends", newFriend, function(data) {
+          if (data) {
+            console.log("You have been added to friends list");
+            // console.log(newFriend);
+            // $("#modalid").modal("toggle");
+          } else {
+            console.log("Error");
+          }
+        });
 
         // if (newFriend.name === "" || newFriend.photo === "") {
         //   alert(
