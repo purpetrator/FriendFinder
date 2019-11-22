@@ -4,9 +4,9 @@
 
 Friend Finder is a play on a matchmaking app which will pair you with your most compatible friend based on survey responses.
 
-> Deployed: [See Here](https://drive.google.com/file/d/1dVZijph996qtKUzzVElYRsgyzsUpsHl8/view)
+> Deployed: [See Here](https://ancient-mountain-36081.herokuapp.com/)
 
-> Repository: [See Here](https://github.com/purpetrator/Bamazon)
+> Repository: [See Here](https://github.com/purpetrator/FriendFinder)
 
 Compatibility is determined by the user's survey responses to 10 questions. Each answer has a value from 1 (Inaccurate) to 5 (Accurate). After the user completes the survey, the user's answers are compared against all existing records. The best match is defined as the existing user whose survey answers had the lowest absolute difference for all 10 questions combined.
 

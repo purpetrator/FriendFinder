@@ -60,8 +60,3 @@ module.exports = function(app) {
     res.json(bestFriend);
   });
 };
-
-// I need to:
-// - Check out the logic: something isn't working with best match score
-// - Display match in modal
-// - Little links to repo and api at the bottom
