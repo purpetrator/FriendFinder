@@ -33,31 +33,35 @@ module.exports = function(app) {
     };
 
     var matchScore;
-    var bestMatchScore = 50000;
+    var bestMatchScore = Infinity;
     var bestMatchIndex;
 
     for (var i = 0; i < friendsData.length; i++) {
       matchScore = 0;
       for (var j = 0; j < newFriend.scores.length; j++) {
         matchScore += difference(friendsData[i].scores[j], newFriend.scores[j]);
-        console.log(friendsData[i].scores[j]);
-        console.log(newFriend.scores[j]);
-        console.log("match score " + matchScore);
+        // console.log(friendsData[i].scores[j]);
+        // console.log(newFriend.scores[j]);
       }
-      console.log("FINALSCORE: " + matchScore);
+      console.log("FINAL MATCH SCORE: " + matchScore);
+      if (matchScore <= bestMatchScore) {
+        bestMatchScore = matchScore;
+        bestMatchIndex = i;
+      }
     }
 
     // check
 
-    if (matchScore <= bestMatchScore) {
-      bestMatchScore = matchScore;
-      bestMatchIndex = i;
-    }
-
     console.log("best match score: " + bestMatchScore);
     console.log("best match index: " + bestMatchIndex);
 
+    var bestFriend = friendsData[bestMatchIndex];
     friendsData.push(req.body);
-    res.json("placeholder");
+    res.json(bestFriend);
   });
 };
+
+// I need to:
+// - Check out the logic: something isn't working with best match score
+// - Display match in modal
+// - Little links to repo and api at the bottom
